@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     gap: 0;
@@ -34,6 +34,7 @@ body{
     font-size: 2.2rem;
     font-weight: 600;
     color: var(--ligth);
+    color: #c3ecca;
 }
 
 .hero h2{
@@ -61,6 +62,7 @@ form{
 label{
     color: var(--ligth);
     font-weight: 600;
+    color: #9aa19a;
 }
 
 input{
