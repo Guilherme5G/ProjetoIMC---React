@@ -12,7 +12,7 @@ function Header(){
                     <ul>
                         <li><a href="#"><i className='fa-regular fa-house'></i> Home</a></li>
                         <li><a href="https://github.com/Guilherme5G" target='_blank'><i className='fa_brand fa-github'></i>GitHub</a></li>
-                        <li><a href="www.linkedin.com/in/guilherme-de-araùjo-moreira-7440602b5" target='_blank'><i className='fa_brand fa-linkedin'></i>LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/in/guilherme-de-ara%C3%B9jo-moreira-7440602b5/" target='_blank'><i className='fa_brand fa-linkedin'></i>LinkedIn</a></li>
                     </ul>
                 </nav>
             </div>
