@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Header />
       <div className="hero">
         <div className="apresentacao">
@@ -65,7 +65,7 @@ function App() {
         )}
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 export default App
