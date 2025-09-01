@@ -2,7 +2,7 @@ import { useState } from "react"
 import Header from "./components/Header"
 import Resultado from "./components/Resultado"
 import './css/style.css'
-import Footer from "./components/footer"
+import Footer from "./components/Footer"
 
 function App() {
 
