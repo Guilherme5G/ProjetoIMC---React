@@ -1,4 +1,3 @@
-import "../css/global.css"
 import "../css/resultado.css"
 import TabelaImc from './TabelaImc'
 

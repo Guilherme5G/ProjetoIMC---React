@@ -1,22 +1,22 @@
-import { useState } from "react"  
+import { useState } from "react"
 import Header from "./components/Header"
 import Resultado from "./components/Resultado"
 import './css/style.css'
-import './css/global.css'
+import Footer from "./components/footer"
 
 function App() {
 
   //HOOK - useState - Maniula o estado da variavel
-  const[altura,setAltura]=useState();
-  const[peso,setPeso]=useState();
-  const[resultado,setResultado]=useState(0);
-  const[mostrarResultado,setMostrarResultado]=useState(false);
+  const [altura, setAltura] = useState();
+  const [peso, setPeso] = useState();
+  const [resultado, setResultado] = useState(0);
+  const [mostrarResultado, setMostrarResultado] = useState(false);
 
   //CRIANDO A FUNCAO CALCULAR IMC
-  const calcularImc=(e)=>{
+  const calcularImc = (e) => {
     e.preventDefault(); //evita o recarregamento da pagina
-    if(altura > 0 && peso > 0){
-      const imc= peso/(altura*altura)
+    if (altura > 0 && peso > 0) {
+      const imc = peso / (altura * altura)
       setResultado(imc.toFixed(2)); //arredonda para 2 casas decimais
       setMostrarResultado(true);
     } else {
@@ -26,39 +26,46 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <div className="">
-        <Header/>
-        <form>
-          <div>
-            <label htmlFor="altura"><span>(exemplo: 1.80)</span></label>
-            <input 
-            type="number"
-            id="altura"
-            placeholder="Digite sua altura"
-            value={altura} 
-            onChange={(e)=>setAltura(parseFloat(e.target.value))}
-            />
-          </div>
+    <>
+      <Header />
+      <div className="hero">
+        <div className="apresentacao">
+          <h1>Descubra se você está no peso ideal!</h1>
+          <h2>A calculadora de IMC é uma ferramenta simples para descobrir se seu peso está adequado à sua altura.
+            Basta inserir seus dados (peso, altura) e você descobrirá sua classificação.</h2>
+        </div>
+        <div className="cards">
+          <form>
+            <div className="box-height">
+              <label htmlFor="altura"><span>(exemplo: 1.80)</span></label>
+              <input
+                type="number"
+                id="altura"
+                placeholder="Digite sua altura"
+                value={altura}
+                onChange={(e) => setAltura(parseFloat(e.target.value))}
+              />
+            </div>
 
-          <div>
-            <label htmlFor="peso"><span>(exemplo: 80)</span></label>
-            <input 
-            type="number"
-            id="peso"
-            placeholder="Digite seu peso"
-            value={peso} 
-            onChange={(e)=>setPeso(parseFloat(e.target.value))}
-            />
-          </div>
-          <button onClick={calcularImc}>Calcular</button>
-        </form>
+            <div className="box-width">
+              <label htmlFor="peso"><span>(exemplo: 80)</span></label>
+              <input
+                type="number"
+                id="peso"
+                placeholder="Digite seu peso"
+                value={peso}
+                onChange={(e) => setPeso(parseFloat(e.target.value))}
+              />
+            </div>
+            <button onClick={calcularImc}>Calcular</button>
+          </form>
+        </div>
+        {mostrarResultado && (
+          <Resultado resultado={resultado} />
+        )}
       </div>
-      {mostrarResultado &&(
-        <Resultado resultado={resultado}/>
-      )}
-
-    </div>
+      <Footer />
+    </>
   )
 }
 export default App
