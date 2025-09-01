@@ -20,5 +20,30 @@ body{
     width: 900px;
     padding: 15px;
     background: #00000070;
-    border: 1px solid #161616a2
+    border: 1px solid #161616a2;
+    border-radius: var(--border);
+    box-shadow: 0px 0px 10px 2px #00000047;
+    backdrop-filter: blur(7px);
+}
+
+.logo img{
+    display: flex;
+    width: 150px;
+}
+
+nav ul{
+    display:flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #cdcdcd;
+    transition: var(--transition);
+}
+
+nav ul li a:hover{
+    color: var(--primary-color);
+    text-shadow: 0px 0px 5px var(--primary-color);
 }
