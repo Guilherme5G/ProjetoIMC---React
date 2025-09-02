@@ -66,14 +66,18 @@ label{
     color: #9aa19a;
 }
 
+label span{
+    color: var(--ligth);
+    color: #9aa19a
+}
 input{
     margin-top: 4px;
     display: flex;
     width: 100%;
     padding: 5px;
-    color: var(--ligth);
+    color: #fff;
     outline: none;
-    background: #80808022;
+    background: #0000;
     backdrop-filter: blur(2px);
     border: none;
     border-radius: 5px;
