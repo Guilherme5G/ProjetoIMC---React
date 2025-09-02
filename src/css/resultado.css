@@ -23,7 +23,7 @@
     border: 1px solid #ffffff36;
     border-radius: var(--border);
     gap: 15px;
-    color: var(--light);
+    color: #fff;
 }
 
 .container .result h2{
@@ -62,4 +62,6 @@
     font-weight: 500;
     display: flex;
     width: 100%;
+    color: #fff
 }
+
